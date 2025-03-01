@@ -33,7 +33,7 @@
         <div class="flex items-center justify-center gap-14">
             <div class="flex items-center gap-6">
                 <div><img src="assets/checkbox.png" alt=""></div>
-                <h1 class="text-3xl font-bold">23</h1>
+                <h1 id="add23" class="text-3xl font-bold">23</h1>
             </div>
             <img id="change_btn" src="assets/theme-btn.png" alt="">
         </div>
@@ -54,15 +54,15 @@
                 <!-- small cards -->
                 <div class="small-cards-box grid grid-cols-4 gap-6">
                     <!-- 1st card -->
-                    <div class="flex items-center gap-10 rounded-xl p-8 bg-blue-50 ">
+                    <div  class=" flex items-center gap-10 rounded-xl p-8 bg-blue-50 ">
                         <div><img src="assets/checkbox.png" alt=""></div>
                         <div class="">
                             <h3>Task Assigned</h3>
-                            <h2 class="text-3xl font-bold">05</h2>
+                            <h2 id="task_assign" class="text-3xl font-bold">06</h2>
                         </div>
                     </div>
                     <!-- 2nd card -->
-                    <div class="col-span-2 flex items-center gap-10 rounded-xl p-8 bg-linear-to-r from-cyan-500 to-blue-500">
+                    <div id="blogpage"  class="col-span-2 cursor-pointer flex items-center gap-10 rounded-xl p-8 bg-linear-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]">
                         <div><img src="assets/board.png" alt=""></div>
                         <div>
                             <h2 class="text-2xl text-white">Discover Something <br> New Today!</h2>
@@ -73,8 +73,8 @@
                     <div class="flex items-center gap-10 rounded-xl p-8 bg-blue-50 ">
                         <div><img src="assets/calender.png" alt=""></div>
                         <div class="">
-                            <h3 class="text-xl">Wed , </h3>
-                            <h3 class="text-xl font-bold">Jul 28 2025</h3>
+                            <h3 class="text-xl"> </h3>
+                            <h3 id="curentdate" class="text-xl font-bold"></h3>
                         </div>
                     </div>  
 
@@ -88,7 +88,7 @@
                     <div class="card  bg-blue-50 card-xl shadow-sm">
                         <div class="card-body">
                             <div class="bg-white w-2/5 text-center p-2 rounded-lg"><p>ShopEase</p></div>
-                            <h2 class="text-2xl font-semibold mt-2">Fix Mobile Button Issue</h2>
+                            <h2 class="title text-2xl font-semibold mt-2">Fix Mobile Button Issue</h2>
                             <div class="bg-white p-2 mt-2 rounded-lg">
                                 <p class="text-gray-500">Debug using Chrome DevTools, check for overlapping ...</p>
                             </div>
@@ -97,7 +97,7 @@
                                     <p class="text-sm">Deadline <br> 21 March 2025</p>
                                     
                                 </div>
-                                <button class="px-4 py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
+                                <button class="complate_btn disabled:opacity-70 disabled:bg-[rgb(146,158,240)] px-4 cursor-pointer py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
                                     Completed
                                 </button>
                             </div>
@@ -112,7 +112,7 @@
                                 <div class="bg-white w-2/5 text-center p-2 rounded-lg">
                                     <p>CloudSync</p>
                                 </div>
-                                <h2 class="text-2xl font-semibold mt-2">Add Dark Mode</h2>
+                                <h2 class="title text-2xl font-semibold mt-2">Add Dark Mode</h2>
                                 <div class="bg-white p-2 mt-2 rounded-lg">
                                     <p class="text-gray-500">Store the user's preference in localStorage, update CSS  ....</p>
                                 </div>
@@ -121,7 +121,7 @@
                                         <p class="text-sm">Deadline <br> 21 March 2025</p>
                     
                                     </div>
-                                    <button class="px-4 py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
+                                    <button class="complate_btn disabled:opacity-70 disabled:bg-[rgb(146,158,240)] px-4 cursor-pointer py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
                                         Completed
                                     </button>
                                 </div>
@@ -136,7 +136,7 @@
                                 <div class="bg-white w-2/5 text-center p-2 rounded-lg">
                                     <p>SwiftPay</p>
                                 </div>
-                                <h2 class="text-2xl font-semibold mt-2">Optimize Home page </h2>
+                                <h2 class="title text-2xl font-semibold mt-2">Optimize Home page </h2>
                                 <div class="bg-white p-2 mt-2 rounded-lg">
                                     <p class="text-gray-500">Debug using Chrome DevTools, check for overlapping...</p>
                                 </div>
@@ -145,7 +145,7 @@
                                         <p class="text-sm">Deadline <br> 21 March 2025</p>
                     
                                     </div>
-                                    <button class="px-4 py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
+                                    <button class="complate_btn disabled:opacity-70 disabled:bg-[rgb(146,158,240)] px-4 py-2 cursor-pointer rounded-lg text-white bg-[rgb(55,82,253)]">
                                         Completed
                                     </button>
                                 </div>
@@ -160,7 +160,7 @@
                                 <div class="bg-white w-2/5 text-center p-2 rounded-lg">
                                     <p>Meta</p>
                                 </div>
-                                <h2 class="text-2xl font-semibold mt-2">Add new emoji 🤲</h2>
+                                <h2 class="title text-2xl font-semibold mt-2">Add new emoji 🤲</h2>
                                 <div class="bg-white p-2 mt-2 rounded-lg">
                                     <p class="text-gray-500">Debug using Chrome DevTools, check for overlapping ...</p>
                                 </div>
@@ -169,7 +169,7 @@
                                         <p class="text-sm">Deadline <br> 21 March 2025</p>
                     
                                     </div>
-                                    <button class="px-4 py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
+                                    <button class="complate_btn disabled:opacity-70 disabled:bg-[rgb(146,158,240)]  px-4 cursor-pointer py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
                                         Completed
                                     </button>
                                 </div>
@@ -184,7 +184,7 @@
                                 <div class="bg-white w-2/5 text-center p-2 rounded-lg">
                                     <p>Google LLC</p>
                                 </div>
-                                <h2 class="text-2xl font-semibold mt-2">Integrate OpenAI API</h2>
+                                <h2 class="title text-2xl font-semibold mt-2">Integrate OpenAI API</h2>
                                 <div class="bg-white p-2 mt-2 rounded-lg">
                                     <p class="text-gray-500">Debug using Chrome DevTools, check for overlapping ...</p>
                                 </div>
@@ -193,7 +193,7 @@
                                         <p class="text-sm">Deadline <br> 21 March 2025</p>
                     
                                     </div>
-                                    <button class="px-4 py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
+                                    <button class="complate_btn disabled:opacity-70 disabled:bg-[rgb(146,158,240)] px-4 cursor-pointer py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
                                         Completed
                                     </button>
                                 </div>
@@ -208,7 +208,7 @@
                                 <div class="bg-white w-2/5 text-center p-2 rounded-lg">
                                     <p>Glassdoar</p>
                                 </div>
-                                <h2 class="text-2xl font-semibold mt-2">Improve Job searching</h2>
+                                <h2 class="title text-2xl font-semibold mt-2">Improve Job searching</h2>
                                 <div class="bg-white p-2 mt-2 rounded-lg">
                                     <p class="text-gray-500">Debug using Chrome DevTools, check for overlapping ...</p>
                                 </div>
@@ -217,7 +217,7 @@
                                         <p class="text-sm">Deadline <br> 21 March 2025</p>
                     
                                     </div>
-                                    <button class="px-4 py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
+                                    <button class="complate_btn disabled:opacity-70 disabled:bg-[rgb(146,158,240)] px-4 cursor-pointer py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
                                         Completed
                                     </button>
                                 </div>
@@ -240,19 +240,15 @@
                     <p>activity Log</p>
                 </div>
                 <div class="mt-5">
-                    <button class="px-4 py-2 rounded-lg text-white bg-[rgb(55,82,253)]">
+                    <button id="clearhistorybtn" class="px-4 py-2 cursor-pointer rounded-lg text-white bg-[rgb(55,82,253)]">
                         Clear History
                     </button>
                 </div>
                </div>
                <!-- cmt part -->
-               <div class=" mt-7 flex flex-col space-y-3">
-                    <div>
-                        <p class="text-sm text-gray-600 bg-blue-50 p-3">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
-                    </div>
-                    <div>
-                    <p class="text-sm text-gray-600 bg-blue-50 p-3">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
-                    </div>
+               <div id="history_container" class=" mt-7 flex flex-col space-y-3">
+                    
+                    <!-- dynamic value added -->
                </div>
             </div>
         </div>
