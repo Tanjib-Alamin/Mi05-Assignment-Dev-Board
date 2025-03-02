@@ -6,11 +6,14 @@ let historyContainer = document.getElementById("history_container");
 
 
 const completeBtns = document.querySelectorAll(".complate_btn");
+const titleTask = document.querySelectorAll(".title");
 
 for (let i = 0; i < completeBtns.length; i++) {
   const btn = completeBtns[i];
 
-    btn.addEventListener("click", function (event) {
+  btn.addEventListener("click", function (event) {
+   
+
 
     alert("board Update  successful");
     if (i === completeBtns.length - 1) {
@@ -26,20 +29,21 @@ for (let i = 0; i < completeBtns.length; i++) {
     taskAssign.innerText = convertTaskAssign;
     addNumber.innerText = convertAddNumber;
 
-    const currentDate = new Date();
-    let text = currentDate.toLocaleDateString();
-    document.getElementById("curentdate").innerText = text;
 
+
+    
+    const currentDate = new Date();
+    const time = currentDate.toLocaleTimeString()
    
 
-    const titleHeader = document.querySelectorAll(".title").innerText;
+    const titleHeader =titleTask[i].innerText;
     
 
     const tranContainer = document.getElementById("history_container");
     const div = document.createElement("div");
     div.classList.add("bg-blue-50", "p-3");
     div.innerHTML = `
-    <p class="text-gray-600 para" >You have Complete The Task ${titleHeader}  at ${text} PM</p>
+    <p class="text-gray-600 para" >You have Complete The Task ${titleHeader}  at ${time} </p>
     `
     tranContainer.appendChild(div);
    
@@ -47,27 +51,41 @@ for (let i = 0; i < completeBtns.length; i++) {
     
 
   })
-  
-
-  // redirect  to blog page
-  document.getElementById("blogpage").addEventListener("click", function () {
-    window.location.href = "blog.html";
-  })
 
 
   // redirect to index page
 
   // document.getElementById("redirctindex").addEventListener("click", function () {
   //   window.location.href = "index.html";
+  //   console.log("hello");
   // });
   
-  
-  const clearHistory = document.getElementById("clearhistorybtn");
+}
+const clearHistory = document.getElementById("clearhistorybtn");
   clearHistory.addEventListener('click', function () {
     document.getElementById("history_container").innerText = '';
   })
 
+   // redirect  to blog page
+  document.getElementById("blogpage").addEventListener("click", function () {
+    window.location.href = "blog.html";
+  })
+
+   const currentDate = new Date();
   
-  
-}
+  const day = currentDate.toLocaleDateString("en-US", { weekday: "short" });
+  const month = currentDate.toLocaleDateString("en-US", { month: "short" });
+  const date = currentDate.toLocaleDateString("en-US", {  day: "numeric" });
+  const year = currentDate.toLocaleDateString("en-US", {   year: "numeric" });
+
+
+document.getElementById("curentdate").innerText = `${day},\n ${month}  ${date} ${year}`;
+ 
+
+
+document.getElementById("change_btn").addEventListener('click', function () {
+  const colors = ['red', 'green', 'blue'];
+  document.body.style.backgroundColor = colors[Math.floor(Math.random() *colors.length)]
+})
+
 
