@@ -1,4 +1,4 @@
-
+let count = 0;
 let  taskAssign = document.getElementById("task_assign");
 let  addNumber = document.getElementById("add23");
 let historyContainer = document.getElementById("history_container");
@@ -13,12 +13,11 @@ for (let i = 0; i < completeBtns.length; i++) {
 
   btn.addEventListener("click", function (event) {
    
-
-
-    alert("board Update  successful");
-    if (i === completeBtns.length - 1) {
-      alert("Task finished");
-    }
+    
+      alert("board Update  successful");
+    // if () {
+    //   alert("congrats!")
+    // }
     
     event.target.setAttribute("disabled", true);
 
@@ -29,9 +28,6 @@ for (let i = 0; i < completeBtns.length; i++) {
     taskAssign.innerText = convertTaskAssign;
     addNumber.innerText = convertAddNumber;
 
-
-
-    
     const currentDate = new Date();
     const time = currentDate.toLocaleTimeString()
    
@@ -46,21 +42,19 @@ for (let i = 0; i < completeBtns.length; i++) {
     <p class="text-gray-600 para" >You have Complete The Task ${titleHeader}  at ${time} </p>
     `
     tranContainer.appendChild(div);
-   
-
-    
-
+    count++;
+    if (count === 6) {
+      alert('congrats')
+    }
+     
   })
-
-
-  // redirect to index page
-
-  // document.getElementById("redirctindex").addEventListener("click", function () {
-  //   window.location.href = "index.html";
-  //   console.log("hello");
-  // });
   
 }
+
+
+
+//clearHistory btn 
+
 const clearHistory = document.getElementById("clearhistorybtn");
   clearHistory.addEventListener('click', function () {
     document.getElementById("history_container").innerText = '';
@@ -71,6 +65,8 @@ const clearHistory = document.getElementById("clearhistorybtn");
     window.location.href = "blog.html";
   })
 
+
+  //current time 
    const currentDate = new Date();
   
   const day = currentDate.toLocaleDateString("en-US", { weekday: "short" });
@@ -82,10 +78,17 @@ const clearHistory = document.getElementById("clearhistorybtn");
 document.getElementById("curentdate").innerText = `${day},\n ${month}  ${date} ${year}`;
  
 
+// background color change
 
 document.getElementById("change_btn").addEventListener('click', function () {
-  const colors = ['red', 'green', 'blue'];
+  const colors = ['red', 'green', 'blue','Yellow', 'Purple', 'Orange', 'Pink',  'Brown'];
   document.body.style.backgroundColor = colors[Math.floor(Math.random() *colors.length)]
 })
 
 
+ // redirect to index page
+
+  // document.getElementById("redirctindex").addEventListener("click", function () {
+  //   window.location.href = "index.html";
+  //   console.log("hello");
+  // });
