@@ -44,7 +44,7 @@ for (let i = 0; i < completeBtns.length; i++) {
     tranContainer.appendChild(div);
     count++;
     if (count === 6) {
-      alert('congrats')
+      alert('Congrates! You have completed all the current task')
     }
      
   })
